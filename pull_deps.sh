@@ -9,11 +9,13 @@ git clone https://github.com/sebbekarlsson/gpp.git --recurse-submodules
 echo "Building dependency: gpp"
 cd gpp;
 git submodule init; git submodule update; git submodule sync;
+mkdir build
+cd build
+cmake ..
 make
-make install
 cd $P
-cp gpp/a.out ./gpp.out
+cp gpp/build/gpp_e ./gpp.out
 pwd
-cp gpp/a.out ./tests/gpp.out
+cp gpp/build/gpp_e ./tests/gpp.out
 cd $P
 rm -rf ./gpp

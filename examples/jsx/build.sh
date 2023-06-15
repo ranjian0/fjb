@@ -1,1 +1,1 @@
-../../fjb.out ./index.jsx > dist.js
+../../build/fjb ./index.jsx -o dist.js
